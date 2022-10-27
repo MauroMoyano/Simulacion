@@ -1,3 +1,5 @@
+const { arrayReplaceAt } = require("markdown-it/lib/common/utils")
+
 /* 
   Importante: 
   No modificar ni el nombre ni los argumetos que reciben las funciones, sólo deben escribir
@@ -14,7 +16,17 @@ function pluck(array, propiedad) {
   // Pista: es una buena oportunidad para usar map.
 
   // Tu código acá:
-
+  /* var aux = ;
+  aux.push(array.map(function(elemento){
+    return elemento;
+  }));
+  return aux;
+  */
+  var aux = [];
+  aux = array.map(function(elemento){
+    return elemento[propiedad];
+  });
+  return aux;
 }
 
 // No modifiques nada debajo de esta linea //
